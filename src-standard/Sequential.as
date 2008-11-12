@@ -1,0 +1,5 @@
+/* PureMVC Demo for AS3 - Sequential Copyright(c) 2008 Duncan Hall <duncan.hall@puremvc.org> Your reuse is governed by the Creative Commons Attribution 3.0 License*/package {	import flash.display.Sprite;
+	import flash.display.StageAlign;
+	import flash.display.StageScaleMode;
+	import org.puremvc.as3.demos.sequential.ApplicationFacade;	
+	/**	 * The main application.	 */	[SWF(width="500", height="300", frameRate="30", backgroundColor="#CCCCCC")]	public class Sequential extends Sprite	{		public function Sequential() 		{			init();		}				/**		 * Set the output display component.		 */		public function set outputComponent( output:Sprite ):void		{			output.x = 50;			output.y = 50;			stage.addChild(output);		}				/**		 * Initialize the application.		 */		public function init():void		{			var facade:ApplicationFacade = ApplicationFacade.getInstance();			stage.scaleMode	= StageScaleMode.NO_SCALE;			stage.align	= StageAlign.TOP_LEFT;			facade.startup( this );		}	}}
